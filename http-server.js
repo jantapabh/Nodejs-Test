@@ -1,14 +1,17 @@
 const http = require('http');
 const server = http.createServer(function (req, res) {
+    var obj = {
 
-var obj = {
-    name: "Jantapa",
-    age: 21,
-    city: "Hatyai" 
-};
+        name: "Jantapa",
+        age: 21,
+        city: "Hatyai"
+    
+    };
     if (req.url === '/') {
         res.write('You are at home page');
-        res.write('\n');
+        res.end();
+    }
+    if (req.url === '/contact'){
         res.write(JSON.stringify(obj));
         res.end();
     }

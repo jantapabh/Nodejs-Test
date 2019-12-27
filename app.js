@@ -1,3 +1,3 @@
-const settings = require('./settings.js');
-const databaseName = settings.databaseName;
-console.log(databaseName);
+const { getSecretKey, databaseName } = require('./settings');
+console.log(getSecretKey);
+consile.log(databaseName);

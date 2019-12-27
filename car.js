@@ -1,4 +1,4 @@
-class Car{
+class Car {
 
     constructor(wheel, color, type) {
 

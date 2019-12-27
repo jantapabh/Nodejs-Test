@@ -1,3 +1,3 @@
-const fs = require('fs');
-fs.writeFileSync('test.txt','Name: ');
-fs.appendFileSync('test.txt','Jantapa');
+const Car = require('./Car');
+const myCar = new Car(4, 'red', 'Pick-up');
+console.log ('My Car color i ${myCar.color}');

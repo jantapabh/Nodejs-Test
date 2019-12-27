@@ -7,7 +7,8 @@ const Settings = {
 
 const getSecretKey = () => {
 
-    return Settings.secretKey;
+        return Settings.secretKey;
+
 }
 
 module.exports.getSecretKey = getSecretKey;

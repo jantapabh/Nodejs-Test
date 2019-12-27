@@ -7,14 +7,14 @@ const server = http.createServer();
 
 server.addListener('connection', function (req, res) {
 
-    if (url === '/') {
+    if ( req.url === '/') {
         res.write('You are at home page');
-        res.rnd();
+        res.end();
     }
     // console.log('Client connector!');
 });
 
-erver.addListener('connection', function (socket) {
+server.addListener('connection', function (socket) {
 
     console.log('Client connector!');
 });

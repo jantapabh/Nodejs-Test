@@ -1,23 +1,16 @@
-const myAsync = (callback) => {
+const p = new Promise(function(resolve, reject){
+    setTimeout(function(){
+        resolve({
+            id: "6035512034",
+            name: "Jan"
+        },2000);
+    });
+    console.log('Before ! ');
+    p.then(function(result) {
+        console.log('result : ', result);
+    })
+    .catch(function(err){
+        console.log(err.message);
+    });
 
-    console.log('Begin');
-
-    setTimeout(() => {
-
-        const result = callback('First');
-        console.log(result);
-
-    }, 2000);
-
-    setTimeout(() => {
-
-        const result = callback('Seconds');
-        console.log(result);
-    },1000);
-
-    setTimeout(() => {
-        const result = callback('Third');
-        console.log(result);
-    },0);
-
-     console.log('End');
+console.log('After Async Operate');

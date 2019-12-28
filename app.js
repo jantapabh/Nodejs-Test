@@ -1,6 +1,6 @@
 const myAsync = (callback) => {
 
-    console.log('Begin);
+    console.log('Begin');
 
     setTimeout(() => {
 

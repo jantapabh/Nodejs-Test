@@ -1,0 +1,4 @@
+Test nodejs 
+
+- แนะนำโมดูลใน nodejs , การเรียก object ผ่าน Promise , การใช้งาน Callback function,
+การทำฃานใน nodejs แบบ Sync และ Async

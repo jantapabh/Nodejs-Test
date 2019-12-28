@@ -1,4 +1,4 @@
-const myPromise1 = new Promise((solve, reject) => {
+const myPromise1 = new Promise((resolve, reject) => {
     setTimeout(() => {
 
         console.log('first');

@@ -38,4 +38,7 @@ const getTheResult = async () => {
     console.log(data);
 }
 
+// aysnc/awit คือการบอกว่าให้รอผลลัพธ์จากฟังก์ชั่นหลัง await ก่อนจึงนำไปเก็บยังตัวแปรได้
+
+
 getTheResult();

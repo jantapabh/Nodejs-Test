@@ -1,16 +1,24 @@
-const p = new Promise(function(resolve, reject){
-    setTimeout(function(){
-        resolve({
-            id: "6035512034",
-            name: "Jan"
-        },2000);
-    });
-    console.log('Before ! ');
-    p.then(function(result) {
-        console.log('result : ', result);
-    })
-    .catch(function(err){
-        console.log(err.message);
-    });
+const myPromise1 = new Promise((solve, reject) => {
+    setTimeout(() => {
 
-console.log('After Async Operate');
+        console.log('first');
+        resolve(1);
+
+    },3000);
+});
+
+const myPromise2 = new Promise((resolve, reject) => {
+
+    setTimeout(() => {
+        
+        console.log('Seconds');
+        resolve(2);
+
+    },2000);
+});
+
+Promise.all([myPromise1, myPromise2]).then((results) => {
+
+    console.log(results);
+
+});

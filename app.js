@@ -1,24 +1,41 @@
-const myPromise1 = new Promise((resolve, reject) => {
-    setTimeout(() => {
+const checkAuth = (id, pass) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const authData = '6035512034';
+            console.log('User Authenicated');
+            resolve({
+                id: id,
+                pass: pass,
+                auth: authData
+            });
 
-        console.log('first');
-        resolve(1);
+        }, 1000);
+    });
 
-    },3000);
-});
+}
 
-const myPromise2 = new Promise((resolve, reject) => {
+const getStudent = (auth) => {
 
-    setTimeout(() => {
-        
-        console.log('Seconds');
-        resolve(2);
+    return new Promise((resolve, reject) => {
 
-    },2000);
-});
+        setTimeout(() => {
 
-Promise.all([myPromise1, myPromise2]).then((results) => {
+            const data = {
 
-    console.log(results);
+                name: 'Jan',
+                permission: 'admin'
+            };
+            resolve(data);
 
-});
+        }, 2000);
+    });
+}
+
+const getTheResult = async () => {
+
+    const auth = await checkAuth(1, 'mypassword');
+    const data = await getStudent(auth);
+    console.log(data);
+}
+
+getTheResult();
